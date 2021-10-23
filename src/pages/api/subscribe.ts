@@ -52,6 +52,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(200).json({ sessionId: stripeCheckoutSession.id });
   } else {
     res.setHeader('Allow', 'POST');
-    res.status(405).end('Method now Allowed');
+    res.status(405).end('Method not Allowed');
   }
 };
